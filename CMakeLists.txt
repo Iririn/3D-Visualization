@@ -11,6 +11,7 @@ find_package(
 include_directories(
 	/System/Library/Frameworks/OpenGL.framework/Headers
 	/System/Library/Frameworks/GLUT.framework/Headers
+	${OPENCV_INCLUDE_DIRS} 
 	include
 )
 
