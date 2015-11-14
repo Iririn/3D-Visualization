@@ -1,11 +1,10 @@
 #include "headDetector.h"
-#include "common.h"
 
 namespace HeadDetector {
 	
 void foo()
 {
-	
+	cv::Mat temp; // Create a cv::Mat matrix for testing
 	cout << "Calling function from headDetector.cpp" << endl;
 }
 

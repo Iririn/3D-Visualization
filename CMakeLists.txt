@@ -2,16 +2,15 @@ cmake_minimum_required (VERSION 2.8.9)
 
 project(3D_Visualization)
 
-find_package(
-	OpenGL REQUIRED
-	GLUT REQUIRED
-	OpenCV REQUIRED
-)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+find_package(OpenCV REQUIRED)
+
 
 include_directories(
 	/System/Library/Frameworks/OpenGL.framework/Headers
 	/System/Library/Frameworks/GLUT.framework/Headers
-	${OPENCV_INCLUDE_DIRS} 
+	/usr/local/include/opencv2
 	include
 )
 

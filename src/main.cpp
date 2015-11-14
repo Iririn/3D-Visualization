@@ -1,6 +1,6 @@
 #include "common.h"
 #include "glRender.h"
-#include "HeadDetector.h"
+#include "headDetector.h"
 
 int main()
 {

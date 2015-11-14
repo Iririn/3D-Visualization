@@ -9,6 +9,5 @@ namespace HeadDetector {
 	
 void foo();
 
-cv::Mat temp;
 }; //end namespace
 
