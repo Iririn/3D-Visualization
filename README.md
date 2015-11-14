@@ -7,8 +7,8 @@
 - Input the following command in terminal
 
 
+
 	mkdir build
 	cd build
 	cmake ..
 	make
-
