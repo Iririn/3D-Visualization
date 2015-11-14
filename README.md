@@ -6,7 +6,7 @@
 - Change to the root directory (same dir as CMakeLists.txt)
 - Input the following command in terminal
 
-	
+
 	mkdir build
 	cd build
 	cmake ..
