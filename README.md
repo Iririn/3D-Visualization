@@ -1,4 +1,4 @@
-# A 3D visualizatin program
+# A 3D visualization program
 
 ## Intro
 
