@@ -10,7 +10,11 @@ find_package(OpenCV REQUIRED)
 include_directories(
 	/System/Library/Frameworks/OpenGL.framework/Headers
 	/System/Library/Frameworks/GLUT.framework/Headers
+	#${OPENCV_LIBRARY_DIRS}
 	/usr/local/include/opencv2
+	/usr/local/include/opencv2/core
+	/usr/local/include/opencv2/highgui
+	/usr/local/include/opencv2/imgproc
 	include
 )
 

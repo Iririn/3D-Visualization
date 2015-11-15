@@ -8,17 +8,23 @@ int main(int argc, char* argv[])
 	
 	// Test function call
 	GLRender::foo();
-	HeadDetector::foo();
 	
-	// Test OpenGL initialize
-	GLRender::initialize(argc, argv);
+	// Test OpenGL initialization
+	// GLRender::initialize(argc, argv);
 	
-	GLRender::display();
+	// GLRender::display();
 	
-	glutDisplayFunc(GLRender::display);
+	// glutDisplayFunc(GLRender::display);
 	
-	glutMainLoop();
+	// glutMainLoop();
 	
+	
+	// Test OpenCV initialization
+	posedetector::HeadDetector* headDetector;
+	
+	headDetector->initializeCamera();
+	cout << "testing" << endl;
+	headDetector->testVideo();
 	
 	return 0;
 }
