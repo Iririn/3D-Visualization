@@ -30,6 +30,7 @@ void display()
 	// Reset transformations
 	glLoadIdentity();
 	  
+	// Drawing
 	glBegin(GL_POLYGON);
 	glColor3f( 1.0, 0.0, 0.0 );    glVertex3f(  0.5, -0.5, -0.5 );	// P1 is red
 	glColor3f( 0.0, 1.0, 0.0 );    glVertex3f(  0.5,  0.5, -0.5 );	// P2 is green
