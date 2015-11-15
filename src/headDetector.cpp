@@ -9,28 +9,22 @@ HeadDetector::HeadDetector()
 
 void HeadDetector::foo()
 {
-	cv::Mat temp; // Create a cv::Mat matrix for testing
-	cout << "Calling function from headDetector.cpp" << endl;
-	cout << this->device << endl;
+	std::string temp = "hello world";
+	cout << "Temp: " << temp << endl;
 }
 
 void HeadDetector::initializeCamera()
 {
 	// Load cascade classifier
-	if (!face_cascade.load(face_cascade_name)) {
-		cerr << "Fail to load 'haarcascade_frontalface_alt.xml'" << endl;
-	} else {
-		cout << "Load cascade classifier succeed" << endl;
-	}
+	// cout << face_cascade_name << endl;
+	// if (!face_cascade->load(face_cascade_name)) {
+	// 	cerr << "Fail to load 'haarcascade_frontalface_alt.xml'" << endl;
+	// } else {
+	// 	cout << "Load cascade classifier succeed" << endl;
+	// }
 
 	// Open video stream
-	videoCapture = new cv::VideoCapture(0);
-	
-	if (videoCapture == NULL || !videoCapture->isOpened()) {
-		cerr << "Fail to open camera" << endl;
-	} else {
-		cout << "Video stream opened" << endl;
-	}
+	videoCapture->open(0);
 }
 
 void HeadDetector::testVideo()

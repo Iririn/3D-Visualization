@@ -6,25 +6,26 @@ int main(int argc, char* argv[])
 {
 	cout << "Hello World" << endl;
 	
-	// Test function call
-	GLRender::foo();
-	
 	// Test OpenGL initialization
-	// GLRender::initialize(argc, argv);
+	GLRender::initialize(argc, argv);
 	
-	// GLRender::display();
+	GLRender::display();
 	
-	// glutDisplayFunc(GLRender::display);
+	glutDisplayFunc(GLRender::display);
 	
-	// glutMainLoop();
+	glutMainLoop();
 	
 	
 	// Test OpenCV initialization
-	posedetector::HeadDetector* headDetector;
+	// posedetector::HeadDetector* headDetector;
 	
-	headDetector->initializeCamera();
-	cout << "testing" << endl;
-	headDetector->testVideo();
+	// headDetector->foo();
+	
+	// cout << "1" << endl;
+	// headDetector->initializeCamera();
+	// cout << "1" << endl;
+	// headDetector->testVideo();
+	// cout << "1" << endl;
 	
 	return 0;
 }
