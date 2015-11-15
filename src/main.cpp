@@ -15,6 +15,7 @@ int main(int argc, char* argv[])
 	
 	glutMainLoop();
 	
+	cout << "Test for changes" << endl;
 	
 	// Test OpenCV initialization
 	// posedetector::HeadDetector* headDetector;
