@@ -2,14 +2,12 @@
 
 namespace posedetector {
 	
-HeadDetector::HeadDetector() 
-{
-
-}
+HeadDetector::HeadDetector() {}
 
 void HeadDetector::foo()
 {
-
+	this->temp = "test";
+	cout << temp << endl;
 }
 
 void HeadDetector::initializeCamera()
@@ -21,31 +19,30 @@ void HeadDetector::initializeCamera()
 	// } else {
 	// 	cout << "Load cascade classifier succeed" << endl;
 	// }
-
-	// Open video stream
-	// videoCapture->open(0);
 }
 
 void HeadDetector::testVideo()
 {
-	// cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
+	// Open video stream
+	videoCapture.open(0);
 	
-	// while (1) {
-	// 	if (!videoCapture->read(frame)) {
-	// 		cerr << "Fail to read frame" << endl;
-	// 		break;
-	// 	}
+	cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
+	
+	while (1) {
+		if (!videoCapture.read(frame)) {
+			cerr << "Fail to read frame" << endl;
+			break;
+		}
 		
-	// 	cv::imshow("Test", frame);
-		
-	// 	if (cv::waitKey() == 27) {
-	// 		cout << "Video capture end" << endl;
-	// 		break;
-	// 	}
-	// }
+		cv::imshow("Test", frame);
+		// if (cv::waitKey() == 27) {
+		// 	cout << "Video capture end" << endl;
+		// 	break;
+		// }
+	}
 }
 
-} //end namespace
+} // end namespace
 
 
 

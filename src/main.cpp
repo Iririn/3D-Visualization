@@ -1,32 +1,34 @@
-#include "common.h"
 #include "glRender.h"
 #include "headDetector.h"
+
+using namespace posedetector;
+using namespace glrender;
 
 int main(int argc, char* argv[])
 {
 	cout << "Hello World" << endl;
 	
+	// --------------------------
 	// Test OpenGL initialization
-	GLRender::initialize(argc, argv);
+	// --------------------------
+	// initialize(argc, argv);
 	
-	GLRender::display();
+	// display();
 	
-	glutDisplayFunc(GLRender::display);
+	// glutDisplayFunc(display);
 	
-	glutMainLoop();
+	// glutMainLoop();
 	
-	cout << "Test for changes hello world" << endl;
 	
+	// --------------------------
 	// Test OpenCV initialization
-	// posedetector::HeadDetector* headDetector;
+	// --------------------------
+	HeadDetector headDetector;
 	
-	// headDetector->foo();
+	headDetector.foo();
 	
-	// cout << "1" << endl;
-	// headDetector->initializeCamera();
-	// cout << "1" << endl;
-	// headDetector->testVideo();
-	// cout << "1" << endl;
+	// headDetector.initializeCamera();
+	headDetector.testVideo();
 	
 	return 0;
 }

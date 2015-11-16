@@ -1,6 +1,6 @@
 #include "glRender.h"
 
-namespace GLRender {
+namespace glrender {
 
 void foo() 
 {
@@ -40,14 +40,7 @@ void display()
 	
 	glFlush();
 	glutSwapBuffers();
+	
 }
 
-// void specialKeys(int key, int x, int y)
-// {
-	
-// }
-
-
-
-
-}; //end namespace
+}; // end namespace
