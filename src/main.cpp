@@ -23,12 +23,12 @@ int main(int argc, char* argv[])
 	// --------------------------
 	// Test OpenCV initialization
 	// --------------------------
-	HeadDetector headDetector;
+	HeadDetector* headDetector = new HeadDetector();
 	
-	headDetector.foo();
+	headDetector->foo();
 	
 	// headDetector.initializeCamera();
-	headDetector.testVideo();
+	headDetector->testVideo();
 	
 	return 0;
 }
