@@ -9,8 +9,7 @@ HeadDetector::HeadDetector()
 
 void HeadDetector::foo()
 {
-	std::string temp = "hello world";
-	cout << "Temp: " << temp << endl;
+
 }
 
 void HeadDetector::initializeCamera()
@@ -24,26 +23,26 @@ void HeadDetector::initializeCamera()
 	// }
 
 	// Open video stream
-	videoCapture->open(0);
+	// videoCapture->open(0);
 }
 
 void HeadDetector::testVideo()
 {
-	cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
+	// cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
 	
-	while (1) {
-		if (!videoCapture->read(frame)) {
-			cerr << "Fail to read frame" << endl;
-			break;
-		}
+	// while (1) {
+	// 	if (!videoCapture->read(frame)) {
+	// 		cerr << "Fail to read frame" << endl;
+	// 		break;
+	// 	}
 		
-		cv::imshow("Test", frame);
+	// 	cv::imshow("Test", frame);
 		
-		if (cv::waitKey() == 27) {
-			cout << "Video capture end" << endl;
-			break;
-		}
-	}
+	// 	if (cv::waitKey() == 27) {
+	// 		cout << "Video capture end" << endl;
+	// 		break;
+	// 	}
+	// }
 }
 
 } //end namespace
