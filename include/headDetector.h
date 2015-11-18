@@ -9,11 +9,17 @@ namespace posedetector {
 
 class HeadDetector {
 private:
-	//Cascade Classifier & some variable for OpenCV
-	const std::string face_cascade_name = "/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml";
+	//Cascade Classifier
+	std::string face_cascade_name;
 	cv::CascadeClassifier face_cascade;
+	
+	// OpenCV x Camera
 	cv::VideoCapture videoCapture;
 	cv::Mat frame;
+	
+	// Camera frame size
+	int camWidth;
+	int camHeight;
 	
 public:
 	// Constructor
@@ -24,8 +30,10 @@ public:
 
 	// Functions
 	void foo();
-	void initializeCamera();
 	void testVideo();
+	
+	int initializeCamera();
+	int loadCascade(std::string _cascade);
 };
 
 } // end namespace

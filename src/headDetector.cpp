@@ -10,16 +10,39 @@ void HeadDetector::foo()
 	cout << temp << endl;
 }
 
-void HeadDetector::initializeCamera()
+int HeadDetector::loadCascade(std::string _cascade)
 {
-	// Load cascade classifier
-	// cout << face_cascade_name << endl;
-	// if (!face_cascade->load(face_cascade_name)) {
-	// 	cerr << "Fail to load 'haarcascade_frontalface_alt.xml'" << endl;
-	// } else {
-	// 	cout << "Load cascade classifier succeed" << endl;
-	// }
+	// "/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml"
+	face_cascade_name = _cascade;
+
+	if (!face_cascade.load(face_cascade_name)) {
+		cerr << "Fail to load 'haarcascade_frontalface_alt.xml'" << endl;
+		return 1;
+	} else {
+		cout << "Load cascade classifier succeed" << endl;
+		return 0;
+	}
 }
+/*
+Initial camera to grab color image for eye detection
+*/
+int HeadDetector::initializeCamera()
+{
+	videoCapture.open(0);
+	
+	if (!videoCapture.isOpened()) {
+		cerr << "Camera open failed" << endl;
+		return 1;
+	} else {
+		camWidth = (int) videoCapture.get(CV_CAP_PROP_FRAME_WIDTH);
+    	camHeight = (int) videoCapture.get(CV_CAP_PROP_FRAME_HEIGHT);
+		
+		cout << "Camera initial succeed" << endl;
+		return 0;
+	}
+}
+
+void 
 
 void HeadDetector::testVideo()
 {

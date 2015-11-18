@@ -25,10 +25,11 @@ int main(int argc, char* argv[])
 	// --------------------------
 	HeadDetector* headDetector = new HeadDetector();
 	
-	headDetector->foo();
+	// Test for load cascade
+	headDetector->loadCascade("/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml");
 	
 	// headDetector.initializeCamera();
-	headDetector->testVideo();
+	headDetector->initializeCamera();
 	
 	return 0;
 }
