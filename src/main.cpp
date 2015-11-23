@@ -24,12 +24,8 @@ int main(int argc, char* argv[])
 	// Test OpenCV initialization
 	// --------------------------
 	HeadDetector* headDetector = new HeadDetector();
-	
-	// Test for load cascade
-	headDetector->loadCascade("/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml");
-	
-	// headDetector.initializeCamera();
-	headDetector->initializeCamera();
+
+	headDetector->testVideo();
 	
 	return 0;
 }

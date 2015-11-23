@@ -10,16 +10,26 @@ namespace posedetector {
 class HeadDetector {
 private:
 	//Cascade Classifier
-	std::string face_cascade_name;
 	cv::CascadeClassifier face_cascade;
+	cv::CascadeClassifier eye_cascade;
 	
 	// OpenCV x Camera
 	cv::VideoCapture videoCapture;
 	cv::Mat frame;
+	cv::Mat gray;
+	cv::Rect eyeRect;
+	cv::Mat eyeTemp;
 	
 	// Camera frame size
 	int camWidth;
 	int camHeight;
+	double glCamX;
+	double glCamY;
+	double glCamZ;
+	
+	const int minFaceSize = 80;
+	const float focal = 500;
+	const float eyesGap = 6.5;
 	
 public:
 	// Constructor
@@ -33,7 +43,9 @@ public:
 	void testVideo();
 	
 	int initializeCamera();
-	int loadCascade(std::string _cascade);
+	int loadCascade();
+	int detectEye(cv::Mat& gray, cv::Mat& eyeTemp, cv::Rect& eyeRect);
+	void trackEye(cv::Mat& gray, cv::Mat& eyeTemp, cv::Rect& eyeRect);
 };
 
 } // end namespace
