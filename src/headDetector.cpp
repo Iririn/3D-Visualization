@@ -85,9 +85,6 @@ int HeadDetector::detectEye(cv::Mat& gray, cv::Mat& eyeTemp, cv::Rect& eyeRect)
 	if (eyes.size()) {
 		eyeRect = eyes[0] + cv::Point(faces[0].x, faces[0].y);
 		eyeTemp = gray(eyeRect);
-		
-		cv::imshow("gray", eyeTemp);
-		cv::waitKey(0);
 	}
 	
 	return eyes.size();
